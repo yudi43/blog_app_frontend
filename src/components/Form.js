@@ -8,7 +8,7 @@ export const Form = (props) => {
   const [img, setImage] = useState(null);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-
+  const token = localStorage.getItem("token");
   const onSubmit = async (event) => {
     event.preventDefault(event);
 
@@ -27,7 +27,7 @@ export const Form = (props) => {
         username: props.username,
         timestamp: Date().toLocaleString(),
       };
-      
+
       axios
         .post(`https://ppagolb.herokuapp.com/blogs/createBlog`, blogData)
         .then((res) => {

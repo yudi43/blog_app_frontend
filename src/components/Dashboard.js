@@ -18,9 +18,14 @@ const mapDispatchToProps = (dispatch) => ({
 const Dashboard = ({ logout, session }) => {
   const [blogs, setblogs] = useState([]);
   console.log(blogs);
+  let config = {
+    headers: {
+      authorization: localStorage.getItem("token"),
+    },
+  };
   React.useEffect(() => {
     axios
-      .get("https://ppagolb.herokuapp.com/blogs/getAllBlogs")
+      .get("https://ppagolb.herokuapp.com/blogs/getAllBlogs", config)
       .then(function (response) {
         console.log(response.data.result);
         setblogs([...blogs, ...response.data.result]);
