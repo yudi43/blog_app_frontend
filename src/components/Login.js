@@ -13,14 +13,17 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const Login = ({ errors, login }) => {
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const user = {
       email: e.target[0].value,
       password: e.target[1].value,
     };
 
-    login(user);
+    const LoggedInUser = await login(user);
+    console.log('Received token -> ', LoggedInUser);
+    
   };
 
   return (

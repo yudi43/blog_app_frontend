@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./components/App";
 import configureStore from "./store/store";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, his } from "react-router-dom";
 import { checkLoggedIn } from "./util/session";
 
 const renderApp = (preloadedState) => {
@@ -12,6 +12,7 @@ const renderApp = (preloadedState) => {
   window.state = store.getState;
 
   ReactDOM.render(
+    
     <Provider store={store}>
       <BrowserRouter>
         <App />
@@ -21,4 +22,4 @@ const renderApp = (preloadedState) => {
   );
 };
 
-(async () => renderApp(await checkLoggedIn()))();
+(async () => renderApp(checkLoggedIn()))();

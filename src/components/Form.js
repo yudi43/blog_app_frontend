@@ -27,7 +27,7 @@ export const Form = (props) => {
         username: props.username,
         timestamp: Date().toLocaleString(),
       };
-
+      
       axios
         .post(`https://ppagolb.herokuapp.com/blogs/createBlog`, blogData)
         .then((res) => {

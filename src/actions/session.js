@@ -15,12 +15,8 @@ const logoutCurrentUser = () => ({
 
 export const login = user => async dispatch => {
   const response = await apiUtil.login(user);
-  const data = await response.json();
-
-  if (response.ok) {
-    return dispatch(receiveCurrentUser(data));
-  }
-  return dispatch(receiveErrors(data));
+  return dispatch(receiveCurrentUser(response));
+  // return dispatch(receiveErrors(response));
 };
 
 export const signup = user => async dispatch => {
@@ -33,12 +29,11 @@ export const signup = user => async dispatch => {
   return dispatch(receiveErrors(data));
 };
 
-export const logout = () => async dispatch => {
-  const response = await apiUtil.logout();
-  const data = await response.json();
+export const logout = () => dispatch => {
+  const response = apiUtil.logout();
 
   if (response.ok) {
     return dispatch(logoutCurrentUser());
   }
-  return dispatch(receiveErrors(data));
+  // return dispatch(receiveErrors(data));
 };

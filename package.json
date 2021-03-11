@@ -14,13 +14,12 @@
     "react-images-upload": "^1.2.8",
     "react-images-uploading": "^3.1.2",
     "react-redux": "^6.0.1",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.16"
   },
-  "homepage": "https://blogsapp12.herokuapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
