@@ -8,17 +8,20 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.3.0",
     "focus-trap-react": "^8.4.2",
-    "react": "^16.8.5",
+    "react": "^16.14.0",
     "react-bootstrap": "^1.5.1",
-    "react-dom": "^16.8.5",
+    "react-dom": "^16.14.0",
     "react-images-upload": "^1.2.8",
     "react-images-uploading": "^3.1.2",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
-    "redux": "^4.0.1",
+    "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.16"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "scripts": {
     "start": "react-scripts start",
