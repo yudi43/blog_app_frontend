@@ -20,6 +20,7 @@
     "redux-thunk": "^2.3.0",
     "shortid": "^2.2.16"
   },
+  "homepage": "https://blogsapp12.herokuapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
